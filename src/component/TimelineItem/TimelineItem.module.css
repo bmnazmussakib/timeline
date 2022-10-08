@@ -1,0 +1,137 @@
+.timelineItem {
+  display: flex;
+  width: 50%;
+  position: relative;
+  margin-bottom: 86px;
+}
+
+.timelineItem:nth-child(odd) {
+  align-self: flex-end;
+  justify-content: flex-start;
+  /* padding-left: 30px; */
+  /* margin-left: 30px; */
+  margin-right: -50px;
+}
+
+.timelineItem:nth-child(even) {
+  align-self: flex-start;
+  justify-content: flex-end;
+  /* padding-right: 30px; */
+  margin-left: -50px;
+}
+
+.timelineNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 0px 30px rgba(30, 36, 51);
+  border-radius: 100px;
+  width: 168px;
+  height: 168px;
+}
+
+.timelineNumber h2 {
+  font-family: "Jost";
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 74px;
+  letter-spacing: 0em;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  background: #2d364d;
+  border-radius: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0ADAB9;
+}
+
+.timelineItem:nth-child(odd) .timelineNumber {
+  position: absolute;
+  top: 30px;
+  left: -350px;
+}
+
+.timelineItem:nth-child(odd) .timelineNumber::after {
+  content: '';
+  height: 3px;
+  width: 100px;
+  background-color: rgba(30, 36, 51);
+  position: absolute;
+  right: -130px;
+  z-index: -100;
+}
+
+.timelineItem:nth-child(even) .timelineNumber {
+  position: absolute;
+  top: 30px;
+  right: -350px;
+}
+
+.timelineItem:nth-child(even) .timelineNumber::after {
+    content: '';
+    height: 3px;
+    width: 100px;
+    background-color: rgba(30, 36, 51);
+    position: absolute;
+    left: -130px;
+    /* z-index: -100; */
+  }
+
+.timelineItem:nth-child(odd)::before {
+  content: "";
+  background-color: white;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  border-radius: 100%;
+  left: -53px;
+  top: 48%;
+  box-shadow: 0px 0px 0px 8px rgba(45,54,77,1);
+  z-index: 100;
+}
+
+.timelineItem:nth-child(even)::after {
+  content: "";
+  background-color: white;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  border-radius: 100%;
+  right: -53px;
+  top: 48%;
+  box-shadow: 0px 0px 0px 8px rgba(45,54,77,1);
+  z-index: 100;
+}
+
+.timelineItemContent {
+  background-color: #1e2433;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.timelineItemTitle {
+  color: #0adab9;
+  font-family: "Jost";
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.timelineItemContent ul {
+  padding-left: 17px;
+}
+
+.timelineItemContent ul li {
+  font-family: "Jost";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #bfc6d7;
+  margin-bottom: 8px;
+}
+
+.timelineItemContent ul li::marker {
+  color: #0adab9;
+}

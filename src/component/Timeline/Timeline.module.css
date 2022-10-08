@@ -1,0 +1,48 @@
+.timelineHead {
+  padding-top: 236px;
+  padding-bottom: 93px;
+  text-align: center;
+  color: white;
+}
+.timelineHead h1 {
+  font-family: "Jost";
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 74px;
+}
+.timelineHead p {
+  font-family: 'Jost';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.tobe{
+text-align: center;
+color: #6A7BA8;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+  position: relative;
+}
+
+.timelineContainer::after {
+  background-color: #1e2433;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: calc(50% - 2px);
+}
+
+.timelineContainer::before {
+    content:url('../../img/arrow.svg'); 
+    position:absolute; /*or absolute*/
+    z-index:100000; 
+    left: calc(50% - 13px);
+    bottom: -18px;
+  }
